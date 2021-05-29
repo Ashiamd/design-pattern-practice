@@ -41,7 +41,7 @@ public enum Singleton004 {
 // 1. 测试 单例类实现
 class Test01 {
     public static void main(String[] args) {
-        // 'Singleton004()' has private access in 'ash.singleton.Singleton004'
+        // 'Singleton004(java.lang.String, java.lang.String, java.lang.Integer)' has private access in 'ash.singleton.Singleton004'
         // Singleton004 instance = new Singleton004();
         Singleton004 instance01 = Singleton004.INSTANCE;
         Singleton004 instance02 = Singleton004.INSTANCE;
