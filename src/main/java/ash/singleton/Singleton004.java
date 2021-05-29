@@ -39,7 +39,7 @@ public enum Singleton004 {
 }
 
 // 1. 测试 单例类实现
-class Test01 {
+/*class Test01 {
     public static void main(String[] args) {
         // 'Singleton004(java.lang.String, java.lang.String, java.lang.Integer)' has private access in 'ash.singleton.Singleton004'
         // Singleton004 instance = new Singleton004();
@@ -50,7 +50,7 @@ class Test01 {
         System.out.println(instance01.getVar3()); // 1
         System.out.println(instance01==instance02); // true
     }
-}
+}*/
 
 // 2. 测试 是否能够通过反射破解单例
 /**
