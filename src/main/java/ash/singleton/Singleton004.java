@@ -12,23 +12,45 @@ package ash.singleton;
  * @date : 2021/5/29 3:52 PM
  */
 public enum Singleton004 {
-    INSTANCE{
-        public final String var1 = "HELLO";
-        public final String var2 = "WORLD";
-        public final Integer var3 = 129;
+    INSTANCE("HELLO","WORLD",1),
+    INSTANCE2("HELLO","WORLD",1);
+
+    private final String var1;
+    private final String var2;
+    private final Integer var3;
+
+    Singleton004(String var1,String var2,Integer var3){
+        this.var1 = var1;
+        this.var2 = var2;
+        this.var3 = var3;
+    }
+
+    public String getVar1() {
+        return var1;
+    }
+
+    public String getVar2() {
+        return var2;
+    }
+
+    public Integer getVar3() {
+        return var3;
     }
 }
 
 // 1. 测试 单例类实现
-/*class Test01 {
+class Test01 {
     public static void main(String[] args) {
         // 'Singleton004()' has private access in 'ash.singleton.Singleton004'
         // Singleton004 instance = new Singleton004();
         Singleton004 instance01 = Singleton004.INSTANCE;
         Singleton004 instance02 = Singleton004.INSTANCE;
+        System.out.println(instance01.getVar1()); // HELLO
+        System.out.println(instance02.getVar2()); // WORLD
+        System.out.println(instance01.getVar3()); // 1
         System.out.println(instance01==instance02); // true
     }
-}*/
+}
 
 // 2. 测试 是否能够通过反射破解单例
 /**
