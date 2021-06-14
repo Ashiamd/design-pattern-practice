@@ -18,7 +18,7 @@ public class CommandTest {
     }
 }
 class Broker{
-    List<Command> commandList;
+    private final List<Command> commandList;
     public Broker() { this.commandList = new ArrayList<>(); }
     public void executeAll(){
         for(Command command : commandList){
@@ -35,13 +35,13 @@ class Number{
     void subtractOne(){ System.out.println("-1"); }
 }
 class AddOneCommand implements Command{
-    Number number;
+    private final Number number;
     public AddOneCommand(Number number) { this.number = number; }
     @Override
     public void execute() { number.addOne(); }
 }
 class SubtractOneCommand implements Command{
-    Number number;
+    private final Number number;
     public SubtractOneCommand(Number number) { this.number = number; }
     @Override
     public void execute() { number.subtractOne(); }
